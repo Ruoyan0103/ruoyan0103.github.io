@@ -1,7 +1,15 @@
-title: "Ruoyan Jin"
-description: "Research, projects, blog"
+title: "Ruoyan's research work"
+description: "Enjoy the process."
+baseurl: ""
+url: "https://ruoyan0103.github.io"
 theme: jekyll-theme-slate
-url: "https://ruoyan0103.github.io"  # put your URL
-baseurl: ""                        # leave empty for user site
-author:
-  name: "Ruoyan Jin"
+
+# Navigation (custom)
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/me"
+  - title: "Research"
+    url: "/research/"
+
