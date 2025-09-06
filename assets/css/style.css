@@ -55,7 +55,7 @@
 }
 
 .project-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   padding: 0; /* remove box padding */
   font-family: inherit; /* use same font as .blog-index */
   transition: transform 0.2s ease; /* keep subtle hover effect */
