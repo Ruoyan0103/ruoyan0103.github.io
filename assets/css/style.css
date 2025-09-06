@@ -14,7 +14,7 @@
   text-decoration: none;  /* remove underline */
   color: #2c3e50;        /* link color */
   font-weight: 1000;      /* increased font weight */
-  font-size: 33rem;     /* increased font size */
+  font-size: 3rem;     /* increased font size */
   padding: 20px 28px;    /* increased padding for larger text */
   border-radius: 6px;
   transition: all 0.3s ease;
