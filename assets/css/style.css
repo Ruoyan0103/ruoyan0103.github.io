@@ -14,7 +14,7 @@
   text-decoration: none;  /* remove underline */
   color: #8888886f;          /* link color */
   font-weight: 1000;      
-  font-size: 1.3rem;      /* link font size */
+  font-size: 1.2rem;      /* link font size */
   padding: 20px 28px;     
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -23,7 +23,7 @@
 
 .nav-list li a:hover {
   color: #000;        /* hover color */
-  background-color: #f8f9fa;
+  background-color: #fff;
 }
 
 .nav-list li a::after {
@@ -33,7 +33,7 @@
   left: 0;
   width: 0;
   height: 3px;
-  background-color: #3498db;
+  background-color: #fff;
   transition: width 0.3s ease;
 }
 
