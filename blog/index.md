@@ -3,7 +3,7 @@ layout: default
 title: Blog
 ---
 
-# Blog Index
+<div class="center-content">
 
 - [Project 1](contents/proj1.md)  
   *Description of Project 1.*
@@ -13,6 +13,8 @@ title: Blog
 
 - [Project 3](proj3.html)  
   *Description of Project 3.*
+
+</div>
 
 
 

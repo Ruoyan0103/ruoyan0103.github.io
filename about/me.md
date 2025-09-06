@@ -1,9 +1,9 @@
 ---
 layout: default
-title: About Me
+title: About
 ---
 
-# About Me
+# About
 
 Hi! I am Ruoyan, a researcher. 
 
