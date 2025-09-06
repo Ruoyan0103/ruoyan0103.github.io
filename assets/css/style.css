@@ -1,11 +1,10 @@
-/* Make the navigation horizontal */
 .nav-list {
-  list-style: none;       /* remove bullets */
+  list-style: none;        /* remove bullets */
   padding: 15px 25px;
   margin: 25px 0;
-  display: flex;          /* horizontal layout */
+  display: flex;           /* horizontal layout */
   justify-content: center; /* center items inside flex */
-  gap: 30px;              /* spacing between items */
+  gap: 30px;               /* spacing between items */
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -13,17 +12,17 @@
 
 .nav-list li a {
   text-decoration: none;  /* remove underline */
-  color: #000;        /* link color */
-  font-weight: 1000;      /* increased font weight */
-  font-size: 2.5rem;     /* increased font size */
-  padding: 20px 28px;    /* increased padding for larger text */
+  color: #8888886f;          /* link color */
+  font-weight: 1000;      
+  font-size: 1.8rem;      /* link font size */
+  padding: 20px 28px;     
   border-radius: 6px;
   transition: all 0.3s ease;
   position: relative;
 }
 
 .nav-list li a:hover {
-  color: #3498db;         /* hover color */
+  color: #3498db;        /* hover color */
   background-color: #f8f9fa;
 }
 

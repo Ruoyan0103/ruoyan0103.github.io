@@ -1,33 +1,17 @@
 ---
-title: "Ruoyan's research"
-description: "Enjoy the advanture!"
+title: "Ruoyan Jin"
 ---
 
-# Hello, Welcome to My Site! 👋
+<div style="text-align: center; font-size: 32px; line-height: 1.5;">
 
-This is a simple homepage built with Markdown.
+# Ruoyan Jin
 
-## About Me
+- [About Me](about/me.md)  
+- [Blog](blog/index.md)  
+- [Publications](publications/index.md)  
+- [Code](https://github.com/Ruoyan0103)  
 
-Hi! I'm **Ruoyan**, a [developer/designer/writer/etc.] passionate about creating web experiences.
+<br>
+ruoyan.jin@aalto.fi
 
-- 🌱 I’m currently learning new web technologies
-- 💻 I love working on open-source projects
-- 📫 You can reach me at [email@example.com](mailto:email@example.com)
-
-## Projects
-
-Here are some of my recent projects:
-
-1. **Project One** - A brief description of the first project.
-2. **Project Two** - Another project with a short description.
-3. **Project Three** - Something else interesting I made.
-
-## Contact
-
-Feel free to connect with me on:
-
-- [GitHub](https://github.com/Ruoyan0103)
-- [LinkedIn](https://www.linkedin.com/in/ruoyan-jin-4369472a9/)
-
-Thanks for visiting! 😊
+</div>
