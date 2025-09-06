@@ -13,9 +13,9 @@
 .nav-list li a {
   text-decoration: none;  /* remove underline */
   color: #2c3e50;        /* link color */
-  font-weight: 700;      /* increased font weight */
-  font-size: 1.3rem;     /* increased font size */
-  padding: 10px 18px;    /* increased padding for larger text */
+  font-weight: 1000;      /* increased font weight */
+  font-size: 3.3rem;     /* increased font size */
+  padding: 20px 28px;    /* increased padding for larger text */
   border-radius: 6px;
   transition: all 0.3s ease;
   position: relative;
