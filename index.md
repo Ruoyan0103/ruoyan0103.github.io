@@ -3,10 +3,7 @@ layout: default
 title: Home
 ---
 
-
 # Welcome
 
-- [About Me](/about/me)
-- [Research](/research/)
-
-
+- [About Me]({{ site.baseurl }}/about/me)
+- [Research]({{ site.baseurl }}/research/)
