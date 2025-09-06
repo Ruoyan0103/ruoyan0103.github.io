@@ -1,76 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+---
+layout: default
+title: Blog
+---
 
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+# Blog Index
 
-    ul {
-      list-style: none;
-      padding: 0;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+- [Project 1](contents/proj1.md)  
+  *Description of Project 1.*
 
-    li {
-      background: #fff;
-      margin-bottom: 15px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
+- [Project 2](proj2.html)  
+  *Description of Project 2.*
 
-    li:hover {
-      transform: translateY(-3px);
-    }
+- [Project 3](proj3.html)  
+  *Description of Project 3.*
 
-    a {
-      text-decoration: underline;
-      font-weight: bold;
-      color: #000;
-    }
 
-    a:hover {
-      text-decoration: underline;
-      color: #000;
-    }
 
-    p {
-      margin: 5px 0 0 0;
-      font-style: italic;
-      color: #000;
-    }
-  </style>
-</head>
-<body>
-  <h1>Blog Index</h1>
-  <ul>
-    <li>
-      <a href="contents/proj1.md">Project 1</a>
-      <p>Description of Project 1.</p>
-    </li>
-    <li>
-      <a href="proj2.html">Project 2</a>
-      <p>Description of Project 2.</p>
-    </li>
-    <li>
-      <a href="proj3.html">Project 3</a>
-      <p>Description of Project 3.</p>
-    </li>
-    <!-- Add more projects here -->
-  </ul>
-</body>
-</html>
+
