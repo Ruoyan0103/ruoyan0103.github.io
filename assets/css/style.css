@@ -85,7 +85,6 @@
   font-family: inherit; /* ensure same font */
 }
 
-
 /* Responsive design for mobile */
 @media (max-width: 600px) {
   .nav-list {
