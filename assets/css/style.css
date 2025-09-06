@@ -4,6 +4,7 @@
   padding: 15px 25px;
   margin: 25px 0;
   display: flex;          /* horizontal layout */
+  justify-content: center; /* center items inside flex */
   gap: 30px;              /* spacing between items */
   background-color: #fff;
   border-radius: 8px;
