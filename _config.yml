@@ -1,4 +1,4 @@
-title: "Ruoyan's research work"
+title: "Ruoyan Jin"
 description: "Enjoy the process."
 baseurl: ""   # if this is a user site (ruoyan0103.github.io). 
               # If it's a project site, set baseurl: "/repo-name"
@@ -9,5 +9,6 @@ theme: jekyll-theme-slate
 # Navigation (supported by Slate)
 header_pages:
   - index.md
+  - blog/index.md
   - about/me.md
-  - research/index.md
+
