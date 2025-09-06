@@ -1,34 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-<body>
-
-  <!-- Header / Navigation -->
-  <header>
-    <nav>
-      <ul>
-        {% for page in site.header_pages %}
-          <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Main content -->
-  <main>
-    {{ content }}
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
-  </footer>
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    {% include navigation.html %}
+    <h1>{{ page.title }}</h1>
+    <section>
+      {{ content }}
+    </section>
+    {% include footer.html %}
+  </body>
 </html>
 
