@@ -3,6 +3,37 @@ layout: default
 title: From Model to Production
 ---
 
-A simple project demonstrating the journey from a machine learning model to a production-ready application. This project 
-is inspired by the book 'Deep Learning for Coders with Fastai and Pytorch: AI Applications Without a PhD', https://course.fast.ai/Resources/book.html,
-chapter 2. 
+<article>
+  <h1>From Model to Production</h1>
+
+  <p>
+    This project demonstrates the journey from a machine learning model to a production-ready application. 
+    It is inspired by the book 
+    <a href="https://course.fast.ai/Resources/book.html" target="_blank" rel="noopener noreferrer">
+      Deep Learning for Coders with Fastai and PyTorch: AI Applications Without a PhD
+    </a>, chapter 2, but adapted to use the PyTorch library.
+  </p>
+
+  <section>
+    <h2>Dataset</h2>
+    <p>
+      The dataset for this project is sourced via DuckDuckGo.
+    </p>
+  </section>
+
+  <section>
+    <h2>Architecture</h2>
+    <p>
+      The pretrained <code>resnet18</code> model was chosen and fine-tuned on this dataset. 
+      Training was conducted in HPC interactive mode to leverage GPU acceleration. 
+      All code is implemented in a Jupyter Notebook.
+    </p>
+  </section>
+
+  <section>
+    <h2>Deployment</h2>
+    <p>
+      The model is deployed using Binder and is fully capable of performing inference.
+    </p>
+  </section>
+</article>
