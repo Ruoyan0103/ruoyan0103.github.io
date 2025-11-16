@@ -73,12 +73,41 @@
   font-family: inherit; /* ensure same font */
 }
 
+.post-header {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+}
+
+.post-header h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.post-header p {
+  color: #555;
+  font-size: 0.9em;
+  margin: 0.2em 0;
+}
+
+.post-content {
+  line-height: 1.6;
+  font-size: 1em;
+}
+
 .project-link:hover {
   color: #000;
   text-decoration: underline;
 }
 
 .project-description {
+  margin: 0.5rem 0 0 0;
+  font-style: italic;
+  color: #6c757d;
+  font-family: inherit; /* ensure same font */
+}
+
+.Date {
   margin: 0.5rem 0 0 0;
   font-style: italic;
   color: #6c757d;
