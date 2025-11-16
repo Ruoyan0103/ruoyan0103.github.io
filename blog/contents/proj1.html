@@ -9,7 +9,7 @@ title: From Model to Production
     max-width: 800px; /* controls the width of the content */
     margin: 50px auto; /* centers horizontally and adds top/bottom spacing */
     padding: 20px;
-    font-size: 1.2rem; /* increases font size */
+    font-size: 1.4rem; /* increases font size */
     line-height: 1.6; /* improves readability */
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
@@ -40,33 +40,107 @@ title: From Model to Production
   <h1>From Model to Production</h1>
 
   <p>
-    This project demonstrates the journey from a machine learning model to a production-ready application. 
-    It is inspired by the book 
+    TL;DR: This project demonstrates a simple bear classifier and provides a hands-on introduction to deploying a deep learning model in a web application. 
+    It is inspired by chapter 2 of the book 
     <a href="https://course.fast.ai/Resources/book.html" target="_blank" rel="noopener noreferrer">
       Deep Learning for Coders with Fastai and PyTorch: AI Applications Without a PhD
-    </a>, chapter 2, but adapted to use the PyTorch library.
-  </p>
+    </a>, 
+    adapted to use PyTorch and deployed on Hugging Face.
+  </p>  
 
   <section>
     <h2>Dataset</h2>
     <p>
-      The dataset for this project is sourced via DuckDuckGo.
+      The dataset used in this project was collected using DuckDuckGo.
     </p>
   </section>
 
   <section>
     <h2>Architecture</h2>
     <p>
-      The pretrained <code>resnet18</code> model was chosen and fine-tuned on this dataset. 
-      Training was conducted in HPC interactive mode to leverage GPU acceleration. 
-      All code is implemented in a Jupyter Notebook.
+      The pretrained <code>resnet18</code> model was selected and fine-tuned on this dataset.
     </p>
-  </section>
+    <p>
+      Jupyter Notebook was used to train and test the model step by step, while an HPC interactive node leveraged a GPU for training. 
+      VSCode served as a convenient interface to inspect results incrementally.
+    </p>
+    <p>
+      Connecting VSCode to the HPC interactive node requires a few steps. For convenience, the setup is outlined below:
+      <br>Step 1: Install <code>ipykernel</code> via <code>pip install ipykernel</code> to use a specific Python environment as a Jupyter kernel.
+      Then assign a name to the kernel. For example, here the Python environment is <code>dl-env</code>, and the Jupyter kernel is named <code>dl-env interactive</code>:
+      <br><code>python -m ipykernel install --user --name dl-env --display-name "dl-env interactive"</code>
+      <br>Note: If <code>jupyterlab</code> is installed via <code>pip install jupyterlab</code> in dl-env environment, VSCode's "Select Kernel" can show this Python environment but not the Jupyter kernel.
+    </p>
+    <p>
+      Step 2: Launch an interactive compute node on HPC using the commands:
+      <br><code>salloc --gres=gpu:1 --time=02:00:00 --mem=32GB</code>
+      <br><code>srun --pty bash -i</code>
+    </p>
+    <p>
+      Step 3: Start Jupyter Lab. The directory from which you launch the lab becomes the root; files outside this directory and its subdirectories are inaccessible. A URL will be generated for later use. Activate your Python environment, e.g., <code>source activate dl-env</code>.
+    </p>
+    <p>
+      Step 4: In VSCode, click "Select Kernel", choose "Existing Jupyter Server...", and enter the URL generated earlier. 
+      You will see the <code>dl-env interactive</code> kernel—select it to use your Python environment on the HPC GPU node.
+    </p>
+    <p>
+      <img src="Figures/proj1/jupyerkernel.jpeg" alt="Jupyter Kernel in VSCode">
+    </p>
+  </section>  
 
   <section>
     <h2>Deployment</h2>
     <p>
-      The model is deployed using Binder and is fully capable of performing inference.
+      In the book chapter 2, the model was deployed using Binder. In this project, I used Hugging Face (HF) Spaces to deploy the demo app. 
+      Since inference only requires a CPU, HF provides a free and convenient option. The following steps outline how to deploy your model on HF.
+    </p>
+  
+    <p>
+      <strong>Step 1: Prepare your files.</strong> 
+      The basic files for an HF app are <code>app.py</code>, <code>requirements.txt</code>, and the model file, e.g., <code>checkpoint.pth</code> (the name can be changed). 
+      During practice, we used a <code>.ipynb</code> notebook; for deployment, we remove dataset generation and training, keeping only the inference part. 
+      To make it interactive, we use Gradio, which HF supports. The notebook was first exported as a Python script from VSCode (Ctrl+Shift+P → "Export to Python Script"). 
+      ChatGPT-5 assisted in generating the Gradio code for inference.
+    </p>
+  
+    <p>
+      The <code>requirements.txt</code> file can be generated automatically using <code>pipreqs</code>:
+      <br><code>pip install pipreqs</code>
+      <br><code>pipreqs /path/to/project</code>
+    </p>
+  
+    <p>
+      <strong>Step 2: Add the model.</strong> 
+      You can include the model in the same repo as <code>app.py</code> and <code>requirements.txt</code>, or in a separate HF dataset repo. 
+      The first method is simpler; for the second, you would use:
+      <pre><code>from huggingface_hub import hf_hub_download
+  checkpoint_path = hf_hub_download(
+      repo_id="UserName/RepoName",
+      filename="checkpoint.pth",
+      repo_type="dataset"
+  )</code></pre>
+    </p>
+  
+    <p>
+      <strong>Step 3: Set up SSH for HF.</strong> 
+      For git pull and push, add your public key to HF. Check your key with:
+      <br><code>cat ~/.ssh/id_rsa.pub</code>
+      <br>Then copy it into HF under "SSH and GPG keys". Next, create a new space by clicking your profile and selecting "New Space". 
+      Upload <code>app.py</code>, <code>requirements.txt</code>, and <code>checkpoint.pth</code>. The build will start automatically.
+    </p>
+  
+    <p>
+      Large model files require Git LFS. Download from <a href="https://git-lfs.com/">https://git-lfs.com/</a>, then update <code>install.sh</code>:
+      <br>Change <code>prefix="/usr/local"</code> to <code>prefix="$HOME/.local"</code>, then run <code>./install.sh</code>. 
+      Before adding the model, track it with Git LFS:
+      <br><code>git lfs track "*.pth"</code>
+      <br><code>git add .gitattributes</code>
+    </p>
+  
+    <p>
+      <strong>Step 4: Share your app.</strong> 
+      Once built, HF provides a link to access the app. Congratulations—your web app with a deep learning model is live!
     </p>
   </section>
+  
 </div>
