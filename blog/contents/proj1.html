@@ -6,7 +6,7 @@ title: From Model to Production
 <style>
   /* Center the content */
   .content-container {
-    max-width: 800px; /* controls the width of the content */
+    max-width: 1000px; /* controls the width of the content */
     margin: 50px auto; /* centers horizontally and adds top/bottom spacing */
     padding: 20px;
     font-size: 1.4rem; /* increases font size */
@@ -33,6 +33,30 @@ title: From Model to Production
 
   a:hover {
     text-decoration: underline;
+  }
+
+    /* Resize images inside content */
+  .content-container img {
+    max-width: 100%;  /* scales image to fit container */
+    height: auto;     /* maintains aspect ratio */
+    display: block;
+    margin: 20px auto; /* centers image with spacing */
+  }
+
+  code {
+    background-color: #f5f5f5; /* light grey background */
+    padding: 2px 6px;          /* smaller padding for inline code */
+    border-radius: 4px;
+    font-family: Consolas, "Courier New", monospace;
+  }
+
+  pre {
+    background-color: #f5f5f5;
+    padding: 12px 16px;
+    border-radius: 5px;
+    font-family: Consolas, "Courier New", monospace;
+    overflow-x: auto;
+    white-space: pre-wrap; /* wrap long lines */
   }
 </style>
 
@@ -66,26 +90,29 @@ title: From Model to Production
     </p>
     <p>
       Connecting VSCode to the HPC interactive node requires a few steps. For convenience, the setup is outlined below:
-      <br>Step 1: Install <code>ipykernel</code> via <code>pip install ipykernel</code> to use a specific Python environment as a Jupyter kernel.
+      <strong>Step 1: Install.</strong> 
+      <code>ipykernel</code> via <code>pip install ipykernel</code> to use a specific Python environment as a Jupyter kernel.
       Then assign a name to the kernel. For example, here the Python environment is <code>dl-env</code>, and the Jupyter kernel is named <code>dl-env interactive</code>:
       <br><code>python -m ipykernel install --user --name dl-env --display-name "dl-env interactive"</code>
       <br>Note: If <code>jupyterlab</code> is installed via <code>pip install jupyterlab</code> in dl-env environment, VSCode's "Select Kernel" can show this Python environment but not the Jupyter kernel.
     </p>
     <p>
-      Step 2: Launch an interactive compute node on HPC using the commands:
+      <strong>Step 2: Launch an interactive compute node on HPC.</strong>
       <br><code>salloc --gres=gpu:1 --time=02:00:00 --mem=32GB</code>
       <br><code>srun --pty bash -i</code>
     </p>
     <p>
-      Step 3: Start Jupyter Lab. The directory from which you launch the lab becomes the root; files outside this directory and its subdirectories are inaccessible. A URL will be generated for later use. Activate your Python environment, e.g., <code>source activate dl-env</code>.
+      <strong>Step 3: Start Jupyter Lab.</strong>
+      The directory from which you launch the lab becomes the root; files outside this directory and its subdirectories are inaccessible. A URL will be generated for later use. Activate your Python environment, e.g., <code>source activate dl-env</code>.
     </p>
     <p>
       Step 4: In VSCode, click "Select Kernel", choose "Existing Jupyter Server...", and enter the URL generated earlier. 
       You will see the <code>dl-env interactive</code> kernel—select it to use your Python environment on the HPC GPU node.
     </p>
-    <p>
-      <img src="Figures/proj1/jupyerkernel.jpeg" alt="Jupyter Kernel in VSCode">
-    </p>
+    <figure>
+        <img src="Figures/proj1/jupyerkernel.jpeg" alt="Jupyter Kernel in VSCode">
+        <figcaption>Jupyter kernel selection in VSCode</figcaption>
+    </figure>
   </section>  
 
   <section>
