@@ -17,8 +17,4 @@ You can write normal markdown:
 
 And code blocks:
 
-```python
-print("hello")
-def add(a, b):
-    return a + b
-```
+
