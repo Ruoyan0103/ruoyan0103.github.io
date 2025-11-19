@@ -12,3 +12,6 @@ header_pages:
   - blog/index.md
   - about/me.md
 
+collections:
+  contents:
+    output: true
