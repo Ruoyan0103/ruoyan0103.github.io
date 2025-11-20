@@ -43,7 +43,7 @@
   }
   
 /* Center the entire page content and stack nav + main vertically */
-body {
+  body {
     display: flex;
     flex-direction: column; /* stack nav and main vertically */
     align-items: center;    /* horizontally center children */
@@ -54,9 +54,8 @@ body {
   
   /* Main container */
   main {
-    display: flex;
-    justify-content: center; /* centres the section horizontally */
-    padding: 2rem 1rem;      /* optional spacing around */
+    padding: 2rem 1rem;
+    width: 100%;    
   }
   
   main section {
