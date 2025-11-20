@@ -60,9 +60,10 @@ body {
   }
   
   main section {
-    max-width: 800px;        /* limits width for readability */
-    width: 100%;             /* allows responsiveness */
-    text-align: left;        /* ensures content inside stays left-aligned */
+    max-width: 1000px;        /* limits width for readability */
+    margin: 2rem auto;  /* centres horizontally */
+    padding: 0 1rem;    /* matches nav horizontal padding */
+    text-align: left;   /* keep content left-aligned */
   }
   
   /* Headings and paragraphs */
