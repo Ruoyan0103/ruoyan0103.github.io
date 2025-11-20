@@ -6,9 +6,5 @@ url: "https://ruoyan0103.github.io"
 
 theme: jekyll-theme-slate
 
-# Navigation (supported by Slate)
-header_pages:
-  - index.md
-  - blog/index.md
-  - about/me.md
+
 
