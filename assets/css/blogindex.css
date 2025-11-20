@@ -54,9 +54,15 @@ body {
   
   /* Main container */
   main {
-    max-width: 800px;  /* constrain content width */
-    width: 100%;
-    text-align: center; /* optional: center text */
+    display: flex;
+    justify-content: center; /* centres the section horizontally */
+    padding: 2rem 1rem;      /* optional spacing around */
+  }
+  
+  main section {
+    max-width: 800px;        /* limits width for readability */
+    width: 100%;             /* allows responsiveness */
+    text-align: left;        /* ensures content inside stays left-aligned */
   }
   
   /* Headings and paragraphs */

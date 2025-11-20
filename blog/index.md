@@ -1,25 +1,15 @@
 ---
 layout: blogindex
-title: Blog
+title: Blog Index
 ---
 
-# Blog Index
+## ML Books
 
-## ML Applications
-
-### Building Machine Learning Powered Applications
+### _Building Machine Learning Powered Applications_
 - [Nice to Know · 2025-11-17](contents/test.md)
 
-### Deep Learning for Coders with Fastai and PyTorch
+### _Deep Learning for Coders with Fastai and PyTorch_
 - [From Model to Production—A simple demo · 2025-11-16](contents/ML2P.html)
-
-## Kaggle
-
-(coming soon)
-
-## Insights
-
-(coming soon)
 
 ## Others
 
