@@ -2,10 +2,9 @@
 layout: default
 title: Blog
 ---
+# Blog Index
 
 <div class="blog-index">
-
-# Blog Index
 
 <div class="tree">
   <ul>
