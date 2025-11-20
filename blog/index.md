@@ -2,60 +2,25 @@
 layout: default
 title: Blog
 ---
+
 # Blog Index
 
-<div class="blog-index">
+## ML Applications
 
-<div class="tree">
-  <ul>
+### Building Machine Learning Powered Applications
+- [Nice to Know · 2025-11-17](contents/test.md)
 
-    <!-- Level 1 -->
-    <li>
-      <span class="toggle">ML Applications</span>
-      <ul class="collapsed">
+### Deep Learning for Coders with Fastai and PyTorch
+- [From Model to Production—A simple demo · 2025-11-16](contents/ML2P.html)
 
-        <!-- Level 2 -->
-        <li>
-          <span class="toggle">Building Machine Learning Powered Applications</span>
-          <ul class="collapsed">
-            <li>
-              <a href="contents/test.md">
-                Nice to Know · 2025-11-17
-              </a>
-            </li>
-          </ul>
-        </li>
+## Kaggle
 
-        <li>
-          <span class="toggle">Deep Learning for Coders with Fastai and PyTorch</span>
-          <ul class="collapsed">
-            <li>
-              <a href="contents/ML2P.html">
-                From Model to Production—A simple demo · 2025-11-16
-              </a>
-            </li>
-          </ul>
-        </li>
+(coming soon)
 
-      </ul>
-    </li>
+## Insights
 
-    <!-- Other root sections -->
-    <li>Kaggle</li>
-    <li>Insights</li>
-    <li>Others</li>
+(coming soon)
 
-  </ul>
-</div>
+## Others
 
-<script>
-  document.querySelectorAll(".toggle").forEach(t => {
-    t.addEventListener("click", () => {
-      t.classList.toggle("open");
-      const nextUl = t.nextElementSibling;
-      if (nextUl) nextUl.classList.toggle("collapsed");
-    });
-  });
-</script>
-
-</div>
+(coming soon)
