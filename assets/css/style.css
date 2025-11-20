@@ -85,6 +85,34 @@
   font-family: inherit; /* ensure same font */
 }
 
+/* Blog index tree styles */
+.blog-index .tree ul {
+  list-style-type: none;
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid #ccc;
+}
+
+.blog-index .toggle {
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+}
+
+.blog-index .toggle::before {
+  content: "▸";
+  margin-right: 0.3rem;
+  transition: 0.2s ease;
+}
+
+.blog-index .toggle.open::before {
+  content: "▾";
+}
+
+.blog-index .collapsed {
+  display: none;
+}
+
 /* Responsive design for mobile */
 @media (max-width: 600px) {
   .nav-list {
