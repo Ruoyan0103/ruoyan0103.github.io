@@ -49,22 +49,22 @@
     align-items: center;    /* horizontally center children */
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    padding: 2rem 0;
+    padding: 1rem 0;        /* reduce top/bottom padding to bring nav and content closer */
   }
-  
+
   /* Main container */
   main {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;     /* smaller padding around main */
     width: 100%;    
   }
-  
+
   main section {
-    max-width: 1000px;        /* limits width for readability */
-    margin: 2rem auto;  /* centres horizontally */
-    padding: 0 1rem;    /* matches nav horizontal padding */
-    text-align: left;   /* keep content left-aligned */
+    max-width: 1000px;      /* limits width for readability */
+    margin: 1rem auto;      /* reduce top margin to decrease distance from nav */
+    padding: 0 1rem;        /* matches nav horizontal padding */
+    text-align: left;       /* keep content left-aligned */
   }
-  
+
   /* Headings and paragraphs */
   h1 {
     margin-bottom: 1rem;
