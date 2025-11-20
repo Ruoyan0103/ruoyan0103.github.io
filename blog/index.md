@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blogindex
 title: Blog
 ---
 
