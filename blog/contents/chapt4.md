@@ -15,10 +15,11 @@ choosing an initial dataset, updating it, and augmenting it.
 - if _small_, the model risks being biased as the data
 - for _small_ dataset, increase the diversity by data _gathering_ and _augmentation_ (add more data for small cluster/outliers, the best way to deal with such biased examples is to gather **additional data** to make your training set more representative)
 
-| Quality                                                                  | Format                                                                                       | Quantity and Distribution                                                                                  |
-| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Are any relevant fields ever <span style="color:red">enpty</span>?       | How many <span style="color:red">processing</span> steps does your data require?             | How many <span style="color:red">examples</span> do you have?                                              |
-| Are there potential <span style="color:red">error</span> of measurement? | Will you be able to preprocess it the <span style="color:red">same</span> way in production? | How many examples <span style="color:red">per</span> class? Are any <span style="color:red">absent</span>? |
+| Quality| Format|Quantity and Distribution|
+| -------| ------|-------------------|
+| Are any relevant fields ever <span style="color:red">empty</span>?| How many <span style="color:red">processing</span> steps does your data require? | How many <span style="color:red">examples</span> do you have?|
+| Are there potential <span style="color:red">errors</span> of measurement? | Will you be able to preprocess it the <span style="color:red">same</span> way in production? | How many examples <span style="color:red">per</span> class? Are any <span style="color:red">absent</span>? |
+
 ### Label to Find Data Trends
 1. <span style="color:blue">summary</span> statistics for <span style="color:blue">each</span> of the <span style="color:blue">features</span> you have, such as average and histogram plots
 2. visualing <span style="color:blue">individual data points</span>
