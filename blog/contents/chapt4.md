@@ -1,8 +1,9 @@
 ## Chapter 4. Acquire Initial Dataset
 ### Iterate on Datasets
 choosing an initial dataset, updating it, and augmenting it. 
+
 ### Explore Your First Dataset
-1. starting with <span style="color:blue">small</span>. dataset
+1. starting with <span style="color:blue">small</span> dataset
 
 2. checking data <span style="color:blue">quality</span>.
 - format?
